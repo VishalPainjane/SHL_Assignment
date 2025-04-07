@@ -1,23 +1,28 @@
-# SHL Assessment Recommendation System
+# SHL Assessment Analysis
 
-This application helps hiring managers find the right assessments for their job roles.
+This project analyzes SHL assessment data to provide insights into various assessment types, their characteristics, and applications.
 
-## Features
+## Project Overview
 
-- Accepts natural language queries, job descriptions, or job post URLs
-- Returns relevant SHL assessments based on the input
-- Displays recommendations in a tabular format with assessment details
-- Supports filtering by test duration and other parameters
-- Provides relevance scores for each recommendation
+This repository contains code and data for analyzing SHL assessments, which are widely used for pre-employment screening and talent evaluation. The analysis includes processing raw assessment data, transforming it into structured formats, and extracting meaningful insights.
 
-## Technologies Used
+## Dataset
 
-- **Frontend**: Streamlit
-- **Backend**: FastAPI
-- **LLM Integration**: Google Gemini
-- **Vector Search**: ChromaDB
-- **Text Embeddings**: Sentence Transformers
-- **Web Scraping**: BeautifulSoup
+The project uses two main data sources:
+
+- `data/raw/shl_catalog_raw.json`: Raw data from the SHL catalog containing detailed information about various assessments
+- `data/processed/shl_assessments.csv`: Processed assessment data with standardized fields including:
+  - Assessment name
+  - URL
+  - Remote testing availability
+  - Adaptive IRT support
+  - Test types (A, B, P, S)
+  - Solution type
+  - Description
+  - Duration
+  - Languages
+  - Job levels
+  - Assessment length
 
 ## Project Structure
 
@@ -45,13 +50,13 @@ This application helps hiring managers find the right assessments for their job 
 
 2. Set up the backend:
 
-   ```
+   ```bash
    cd backend
    pip install -r requirements.txt
    ```
 
 3. Set up the frontend:
-   ```
+   ```bash
    cd frontend
    npm install
    ```
