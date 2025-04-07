@@ -1,0 +1,29 @@
+# Web Framework
+fastapi==0.104.1
+uvicorn==0.23.2
+streamlit==1.28.0
+pydantic==2.4.2
+
+# Web Scraping
+beautifulsoup4==4.12.2
+requests==2.31.0
+selenium==4.15.2
+webdriver-manager==4.0.1
+
+# Data Processing
+pandas==2.1.1
+numpy==1.26.0
+
+# LLM and Vector Database
+langchain==0.0.312
+langchain-community==0.0.10
+google-generativeai==0.3.0
+# Fix compatibility issues by pinning versions
+sentence-transformers==2.2.2
+transformers==4.34.0
+huggingface-hub==0.16.4
+chromadb==0.4.18
+
+# Utilities
+python-dotenv==1.0.0
+tqdm==4.66.1

@@ -1,0 +1,16 @@
+SHL_Assignment/
+├── app/
+│   ├── frontend/             # Streamlit web interface
+│   └── backend/              # FastAPI backend service
+├── data/
+│   ├── raw/                  # Raw data scraped from SHL catalog
+│   └── processed/            # Processed assessment data
+├── models/                   # Vector embeddings and models
+├── utils/
+│   ├── crawler.py            # Web scraper for SHL catalog
+│   ├── evaluation.py         # Metrics calculation (Recall@K, MAP@K)
+│   └── processing.py         # Text processing utilities
+├── config.py                 # Configuration settings
+├── requirements.txt          # Dependencies
+├── README.md                 # Project documentation
+└── approach.md               # 1-page approach document
