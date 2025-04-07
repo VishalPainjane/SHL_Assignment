@@ -1,0 +1,118 @@
+# 🧠 SHL AI Intern RE Generative AI Assignment
+
+## 📌 Task Overview: Build an SHL Assessment Recommendation System
+
+Hiring managers often struggle to find the right assessments for roles they're hiring for. Currently, this process relies heavily on keyword searches and filters, making it inefficient.
+
+Your task is to **build an intelligent recommendation system** that simplifies this process.
+
+> Given a **natural language query**, a **job description (JD)**, or a **URL**, your application should return a list of relevant SHL assessments.
+
+You can refer to SHL’s assessment catalog here:  
+👉 [SHL Product Catalog](https://www.shl.com/solutions/products/product-catalog/)
+
+---
+
+## ✅ Objectives
+
+Build a **web application** that:
+
+1. Accepts a **natural language query**, **job description text**, or a **job post URL**.
+2. Returns a list of **1–10 most relevant SHL assessments**.
+3. Displays the recommendations in **tabular format** with the following columns:
+   - **Assessment Name** (linked to SHL's catalog)
+   - **Remote Testing Support** (Yes/No)
+   - **Adaptive/IRT Support** (Yes/No)
+   - **Test Duration**
+   - **Test Type**
+
+---
+
+## 📤 Submission Guidelines
+
+Submit the following via this [Microsoft Form](https://forms.office.com/r/Pq8dYPEGH4):
+
+- **Hosted Web Demo URL** – Frontend that accepts queries and shows results
+- **API Endpoint URL** – Accepts query/text and returns structured JSON
+- **GitHub Repository URL** – Containing complete source code
+- **1-Page Approach Document** – Include tools, libraries, and methods used
+
+---
+
+## 🧪 Evaluation Criteria
+
+Your submission will be evaluated on:
+
+### 🔍 Approach
+- How the catalog was crawled/processed
+- Data representation and search techniques
+- Usage of LLM stack (e.g., LangChain, Gemini, etc.)
+- Tracing and evaluation tools used
+
+### 🎯 Accuracy
+- Using benchmark sets
+- Metrics:
+  - **Mean Recall@3**
+  - **MAP@3**
+
+### 🧑‍💻 Demo Quality
+- Working end-to-end solution
+- Attention to usability and details
+- Usage of low-code frameworks like **Streamlit** or **Gradio** is acceptable
+
+---
+
+## 📊 Accuracy Metrics
+
+### Mean Recall@K
+
+```text
+Recall@K = (Number of relevant results in top K) / (Total number of relevant results)
+
+Mean Recall@K = (1/N) * Σ Recall@K_i
+Where:
+
+N = number of test queries
+
+Mean Average Precision@K (MAP@K)
+text
+Copy
+Edit
+AP@K = (1 / min(K, R)) * Σ (P(k) * rel(k)) for k = 1 to K
+
+MAP@K = (1/N) * Σ AP@K_i
+Where:
+
+R = total number of relevant results
+
+P(k) = Precision at rank k
+
+rel(k) = 1 if the item at rank k is relevant, else 0
+
+N = total number of queries
+
+The higher the Mean Recall@K and MAP@K, the better the performance.
+
+📄 Example Queries
+Here are some test cases to evaluate your system:
+
+"I am hiring for Java developers who can also collaborate effectively with my business teams. Looking for an assessment(s) that can be completed in 40 minutes."
+
+"Looking to hire mid-level professionals proficient in Python, SQL and JavaScript. Need an assessment package that can test all skills with max duration of 60 minutes."
+
+"Here is a JD text, can you recommend some assessments that can help me screen applications? Time limit is less than 30 minutes."
+
+"I am hiring for an analyst and want applications to be screened using cognitive and personality tests. What options are available within 45 minutes?"
+
+🔗 Resources
+SHL Product Catalog
+https://www.shl.com/solutions/products/product-catalog/
+
+Google Gemini Free API Docs
+https://ai.google.dev/gemini-api/docs/pricing
+
+Submission Form
+https://forms.office.com/r/Pq8dYPEGH4
+
+Sample Job Description for Testing
+SHL AI Research Engineer Job Posting
