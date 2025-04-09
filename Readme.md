@@ -1,14 +1,10 @@
 # SHL Assessment Recommendation System
 
-![SHL Logo](https://www.shl.com/wp-content/themes/shl/img/logo.svg)
-
-### Made By: Vishal Painjane
-
 ## 📋 Overview
 This intelligent recommendation system helps hiring managers find the right SHL assessments for their roles. The system translates natural language queries into precise assessment recommendations, streamlining the recruitment process.
 
-**Live Demo:** [SHL Assessment Recommendation System](https://vishalpainjane-shl-assignment.hf.space/)  
-**API Documentation:** [API Docs](https://vishalpainjane-shl-assignment.hf.space/docs#/default/recommend_recommend_get)
+**Live Demo:** [https://vishalpainjane-shl-assignment.hf.space/](https://vishalpainjane-shl-assignment.hf.space/)  
+**API Documentation:** [https://vishalpainjane-shl-assignment.hf.space/docs#/default/recommend_recommend_get](https://vishalpainjane-shl-assignment.hf.space/docs#/default/recommend_recommend_get)
 
 ## 🔍 Features
 - Natural language query processing
