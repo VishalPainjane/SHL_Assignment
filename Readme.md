@@ -118,6 +118,50 @@ GEMINI_API_KEY=your_gemini_api_key
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 ```
 
+### Docker Setup
+
+You can also run this application using Docker for easier deployment and consistent environments.
+
+#### Using Docker
+
+1. Build the Docker image:
+```bash
+docker build -t shl-recommendation-system .
+```
+
+2. Run the container:
+```bash
+docker run -d -p 8000:8000 --env-file .env --name shl-recommender shl-recommendation-system
+```
+
+3. Access the application at `http://localhost:8000`
+
+#### Using Docker Compose
+
+1. Create a `docker-compose.yml` file in the project root:
+```yaml
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+```
+
+2. Start the services:
+```bash
+docker-compose up -d
+```
+
+3. Stop the services:
+```bash
+docker-compose down
+```
+
 ## 📊 Project Structure
 ```
 SHL_Assignment/
