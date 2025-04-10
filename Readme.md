@@ -3,6 +3,12 @@
 ## 📋 Overview
 This intelligent recommendation system helps hiring managers find the right SHL assessments for their roles. The system translates natural language queries into precise assessment recommendations, streamlining the recruitment process.
 
+### Web Interface
+**Live Website**: [https://shl-live-phli.vercel.app/](https://shl-live-phli.vercel.app/)
+
+*GitHub*: [https://github.com/VishalPainjane/SHL_web](https://github.com/VishalPainjane/SHL_web)
+
+### API
 **Live Demo:** [https://vishalpainjane-shl-assignment.hf.space/](https://vishalpainjane-shl-assignment.hf.space/)  
 **API Documentation:** [https://vishalpainjane-shl-assignment.hf.space/docs#/default/recommend_recommend_get](https://vishalpainjane-shl-assignment.hf.space/docs#/default/recommend_recommend_get)
 
@@ -81,9 +87,6 @@ GET /recommend?query={query}&max_results={max_results}
 GET /recommend?query=Looking for a leadership assessment for managers that can be completed in 30 minutes&max_results=3
 ```
 
-### Web Interface
-Visit the [live demo](https://vishalpainjane-shl-assignment.hf.space/) to use the web interface.
-
 ## 📦 Installation
 
 ### Prerequisites
@@ -116,50 +119,6 @@ GEMINI_API_KEY=your_gemini_api_key
 4. Run the application:
 ```bash
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
-```
-
-### Docker Setup
-
-You can also run this application using Docker for easier deployment and consistent environments.
-
-#### Using Docker
-
-1. Build the Docker image:
-```bash
-docker build -t shl-recommendation-system .
-```
-
-2. Run the container:
-```bash
-docker run -d -p 8000:8000 --env-file .env --name shl-recommender shl-recommendation-system
-```
-
-3. Access the application at `http://localhost:8000`
-
-#### Using Docker Compose
-
-1. Create a `docker-compose.yml` file in the project root:
-```yaml
-version: '3'
-services:
-  app:
-    build: .
-    ports:
-      - "8000:8000"
-    env_file:
-      - .env
-    volumes:
-      - ./data:/app/data
-```
-
-2. Start the services:
-```bash
-docker-compose up -d
-```
-
-3. Stop the services:
-```bash
-docker-compose down
 ```
 
 ## 📊 Project Structure
